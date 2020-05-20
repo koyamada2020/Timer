@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- FontAwesome -->
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <!-- my css -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- js読み込み -->
+    <script type="text/javascript" src="timer.js"></script>
+    <title>24時間タイマー</title>
+</head>
+<body class="container">
+    <header>24時間タイマー</header>
+    <div class="content">
+        <div id="timertext" class="display-1">
+            <span id="hour">00</span><span class="display-4">h</span><span id="minute">00</span><span class="display-4">m</span><span id="second">00</span><span class="display-4">s</span>
+        </div>
+        <div class="table-block">
+            <table class="table table-borderless">
+                <tr>
+                    <th onclick="inputNumber(this)">1</th>
+                    <th onclick="inputNumber(this)">2</th>
+                    <th onclick="inputNumber(this)">3</th>
+                </tr>
+                <tr>
+                    <th onclick="inputNumber(this)">4</th>
+                    <th onclick="inputNumber(this)">5</th>
+                    <th onclick="inputNumber(this)">6</th>
+                </tr>
+                <tr>
+                    <th onclick="inputNumber(this)">7</th>
+                    <th onclick="inputNumber(this)">8</th>
+                    <th onclick="inputNumber(this)">9</th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th onclick="inputNumber(this)">0</th>
+                    <th></th>
+                </tr>
+            </table>
+        </div>
+        <ul class="list-inline">
+            <!-- 一時停止ボタン<li class="far fa-pause-circle fa-5x list-inline-item"></li> -->
+            <li id="start" class="far fa-play-circle fa-5x list-inline-item"></li>
+            <li id="reset" class="far fa-times-circle fa-5x list-inline-item"></li>
+        </ul>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <!---->
+</body>
+</html>
