@@ -9,6 +9,14 @@ let timerId;
 
 let startFlag = false;
 
+// https://ja.javascript.info/cookie#ref-880
+function getCookie(name) {
+    let matches = document.cookie.match(new RegExp(
+      "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+    ));
+    return matches ? decodeURIComponent(matches[1]) : undefined;
+}
+
 function inputNumber(el) {
     const num = el.textContent;
     // 数値が6桁になるまで結合する
