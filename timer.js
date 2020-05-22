@@ -9,6 +9,10 @@ let timerId;
 
 let startFlag = false;
 
+const COOKIE_KEY_H = 'CKTH';
+const COOKIE_KEY_M = 'CKTM';
+const COOKIE_KEY_S = 'CKTS';
+
 // https://ja.javascript.info/cookie#ref-880
 function getCookie(name) {
     let matches = document.cookie.match(new RegExp(
@@ -137,7 +141,11 @@ function startTimer() {
                 pauseElm.addEventListener('click', startTimer, false);
         
             }
-    
+
+            document.cookie = `${COOKIE_KEY_H}=${h}`;
+            document.cookie = `${COOKIE_KEY_M}=${m}`;
+            document.cookie = `${COOKIE_KEY_S}=${s}`;
+            console.log(document.cookie);
             console.log('hour=',h,'minute=',m,'second=',s);
         }, 1000);
     }
