@@ -31,13 +31,18 @@ function inputNumber(el) {
 }
 
 function displayTimerText() {
+    // Cookie に保存されていればその値を利用する
+    hourStr = getCookie(COOKIE_KEY_H);
+    minuteStr = getCookie(COOKIE_KEY_M);
+    secondStr = getCookie(COOKIE_KEY_S);
+
     // 0埋め
     const sixNum = ('000000' + timerText).slice(-6);
 
     // 2桁ごと時間を分割して代入 "123456" = "12" "34" "56"
-    hourStr = sixNum.substr(0, 2);
-    minuteStr = sixNum.substr(2, 2);
-    secondStr = sixNum.substr(4, 2);
+    hourStr = hourStr || sixNum.substr(0, 2);
+    minuteStr = minuteStr || sixNum.substr(2, 2);
+    secondStr = secondStr || sixNum.substr(4, 2);
 
     // 時間を表示する要素を取得
     const hourEl = document.getElementById('hour');
@@ -162,5 +167,6 @@ function init() {
     // イベントリスナーの登録
     document.getElementById('start').addEventListener('click', startTimer, false);
     document.getElementById('reset').addEventListener('click', resetTimer, false);
+    displayTimerText();
 }
 window.onload = init;
