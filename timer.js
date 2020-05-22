@@ -159,6 +159,9 @@ function startTimer() {
 
 function resetTimer() {
     timerText = '';
+    document.cookie = `${COOKIE_KEY_H}=`;
+    document.cookie = `${COOKIE_KEY_M}=`;
+    document.cookie = `${COOKIE_KEY_S}=`;
     clearInterval(timerId);
     displayTimerText();
 }
