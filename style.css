@@ -1,0 +1,42 @@
+header {
+    text-align: center;
+}
+
+.content {
+    margin-top: 50px;
+}
+
+.table-block {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.table-block table tr th {
+    font-size: 40px;
+}
+
+#timertext {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+
+/* bootstrap */
+.list-inline {
+    text-align: center;
+}
+
+.list-inline li {
+    margin: 30px;
+}
+
+.table-block table {
+    margin: 0 auto;
+    width: 50%;
+}
+
+/* スマホ用の表示 */
+@media only screen and (max-width : 736px){
+    .table-block table {
+        width: 100%;
+    }
+}
